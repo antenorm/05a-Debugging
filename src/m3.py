@@ -5,8 +5,8 @@ That is, no run-time exception occurs, but the function simply
 does not do the right thing.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Antenore.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ########################################################################
@@ -41,6 +41,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    run_test_broken_1()
 
 
 ########################################################################
@@ -124,9 +125,9 @@ def broken_1(m):
     for k in range(2 * m):
         if is_prime(m):
             count = count + 1
-
-
+        m += 1
+    return count
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
-    main()
+main()
